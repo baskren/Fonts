@@ -1,4 +1,4 @@
-﻿// Copyright (c) Six Labors and contributors.
+// Copyright (c) Six Labors and contributors.
 // Licensed under the Apache License, Version 2.0.
 
 using System;
@@ -194,7 +194,7 @@ namespace SixLabors.Fonts
 
         private static void AlignToGrid(ref Vector2 point)
         {
-            var floorPoint = new Vector2(MathF.Floor(point.X), MathF.Floor(point.Y));
+            var floorPoint = new Vector2((float)Math.Floor(point.X), (float)Math.Floor(point.Y));
             Vector2 decimalPart = point - floorPoint;
 
             decimalPart.X = decimalPart.X < 0.5f ? 0 : 1f;
